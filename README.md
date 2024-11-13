@@ -118,3 +118,6 @@ A pesar de los beneficios potenciales, el programa también enfrenta desafíos. 
 El análisis social del programa revela que, si se implementa de manera adecuada, tiene el potencial de transformar la forma en que se aborda la delincuencia y la rehabilitación en la sociedad. Al centrarse en la empatía, la reducción de costos y la reinserción social, se puede crear un sistema de justicia penal más justo y efectivo. Sin embargo, es crucial abordar los desafíos éticos y prácticos para garantizar que el programa cumpla con sus objetivos sin comprometer la integridad de los individuos involucrados.
 
 ## Video LOOM
+
+## Asciinema
+https://asciinema.org/a/3k5LgeYswmBI6EaFWcqzYqi2h
