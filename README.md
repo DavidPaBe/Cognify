@@ -26,6 +26,7 @@ Título del trabajo:
 Estudiante:
 Sanchez Rosas Karime Lizbeth
 Paez Beltra David
+Luna Hernandez Harim
 
 	</p>
 
