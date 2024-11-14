@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Create Simulation for {{ criminal.name }}</h2>
+
+  {% if error %}
+    <div class="error">{{ error }}</div>
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Renderiza el formulario con los campos definidos en el formulario -->
+
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}

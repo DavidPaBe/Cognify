@@ -1,0 +1,9 @@
+<h1>Bienvenido a Cognify</h1>
+<h2>Criminales en Rehabilitación</h2>
+<ul>
+    {% for criminal in criminals %}
+        <li>
+            {{ criminal.name }} - <a href="{% url 'create_simulation' criminal.id %}">Crear simulación</a>
+        </li>
+    {% endfor %}
+</ul>

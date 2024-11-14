@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5" style="padding-left: 4%; padding-right: 4%;">
+    <div class="mt-5"> <!-- Ajusta la clase mt-5 o el valor según sea necesario -->
+        <div class="row">
+            {% for restaurant in restaurantes %}
+            <div class="col-sm-4 mb-3 mb-sm-0">
+                <div class="card">
+                    <div class="card-header dark">
+                        <h5 class="card-title">{{restaurant.nombre}}</h5>
+                    </div>
+                    <div class="card-body">
+                        
+                        <p class="card-text">Direccion: {{restaurant.direccion}}</p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        Capacidad {{restaurant.capacidad}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
