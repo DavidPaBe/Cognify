@@ -1,0 +1,16 @@
+<!-- create_criminal.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Criminal</title>
+</head>
+<body>
+    <h1>Create New Criminal</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Criminal</button>
+    </form>
+</body>
+</html>

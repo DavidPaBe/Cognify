@@ -1,5 +1,5 @@
 from django import forms
-from .models import Criminal
+from .models import Criminal, Simulation
 
 class CriminalForm(forms.ModelForm):
     class Meta:
@@ -28,3 +28,8 @@ class CriminalForm(forms.ModelForm):
             raise forms.ValidationError("Rehabilitation option is not available for felonies or murder.")
         
         return cleaned_data
+
+class SimulationForm(forms.ModelForm):
+    class Meta:
+        model = Simulation
+        fields = ['criminal', 'memory', 'end_time']

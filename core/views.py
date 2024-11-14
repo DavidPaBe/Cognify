@@ -1,12 +1,23 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect,  get_object_or_404
 from django.http import Http404
 from .models import Criminal, Memory, Simulation
-from .forms import SimulationForm
+from .forms import SimulationForm, CriminalForm
 
 def index(request):
     # Mostrar todos los criminales disponibles
     criminals = Criminal.objects.all()
     return render(request, 'core/index.html', {'criminals': criminals})
+
+
+def create_criminal(request):
+    if request.method == 'POST':
+        form = CriminalForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')  # Redirige a la página principal o donde desees después de crear un criminal
+    else:
+        form = CriminalForm()
+    return render(request, 'core/create_criminal.html', {'form': form})
 
 def create_simulation(request, criminal_id):
     criminal = get_object_or_404(Criminal, id=criminal_id)
@@ -43,3 +54,13 @@ def create_simulation(request, criminal_id):
             return render(request, 'core/create_simulation.html', {'criminal': criminal, 'error': f'Error al crear la simulación: {str(e)}'})
 
     return render(request, 'core/create_simulation.html', {'criminal': criminal})
+
+def create_simulation_without_criminal(request):
+    if request.method == 'POST':
+        form = SimulationForm(request.POST)
+        if form.is_valid():
+            simulation = form.save()
+            return redirect('index')
+    else:
+        form = SimulationForm()
+    return render(request, 'core/create_simulation.html', {'form': form})
