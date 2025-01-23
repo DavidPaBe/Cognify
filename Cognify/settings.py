@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-j-ou8#*1_&$s1d5a)%!8s=^xj-&klz+9v-cs4hp(l7*9ydv7-&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['cognify-nzu6.onrender.com']
 
 
 # Application definition
